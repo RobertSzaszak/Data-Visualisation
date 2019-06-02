@@ -1,0 +1,24 @@
+import pandas as pd # import module name it pd
+from matplotlib import pyplot as plt
+
+x = [1, 2, 3]
+y = [1, 4, 9]
+z = [10, 5, 0]
+plt.plot(x, y)
+plt.plot(x, z)
+plt.title("test plot")
+plt.xlabel("x")
+plt.ylabel("y and z")
+plt.legend(["this is y", "this is z"])
+plt.show()
+
+sample_data = pd.read_csv('sample_data.csv')
+
+type(sample_data) # Check the type of data
+type(sample_data.column_c)
+
+sample_data.column_c.iloc[1] # iloc gets a specific value
+
+plt.plot(sample_data.column_a, sample_data.column_b, 'o')  # The 3rd agrument controls how the plot looks
+plt.plot(sample_data.column_a, sample_data.column_c)
+plt.show()
